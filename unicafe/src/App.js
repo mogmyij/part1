@@ -30,17 +30,16 @@ const App = () => {
       <Button state={bad} setState={setBad} text="bad" />
       <h1>Stats</h1>
       {!firstTime ? (
-        <body>
-          <table>
-          <StatLine text="good: " value={good} />
-          <StatLine text="neutral: " value={neutral} />
-          <StatLine text="bad: " value={bad} />
-          <StatLine text="all: " value={good + neutral + bad} />
-          <StatLine text="average" value={(good - bad) / (good + neutral + bad)} />
-          <StatLine text="Percentage good:" value={(good / (good + neutral + bad)) * 100} />
-          </table>
-          
-        </body>
+        <table>
+          <tbody>
+            <StatLine text="good: " value={good} />
+            <StatLine text="neutral: " value={neutral} />
+            <StatLine text="bad: " value={bad} />
+            <StatLine text="all: " value={good + neutral + bad} />
+            <StatLine text="average" value={(good - bad) / (good + neutral + bad)} />
+            <StatLine text="Percentage good:" value={(good / (good + neutral + bad)) * 100} />
+          </tbody>
+        </table>
       ) : (<p>no stats available</p>)}
 
     </div>
